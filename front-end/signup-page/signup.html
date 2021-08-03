@@ -1,0 +1,102 @@
+<!-- Paminus Murungi CIT-223-032/2018
+purity nyakundi -CIT-227-028/2018
+Alois Mutharimi - CIT-227-001/2018
+Collins Kipkorir - CIT-227-006/2018
+Tom Ngunyi King'ori - CIT-227-029/2018
+Brian Nyagwansa Nyagwansa - CIT-227-032/2018
+BruceFelix Macharia CIT-223-015/2018 -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+
+    <link rel="stylesheet" href="../../styles/style.css">
+
+    <link rel="shortcut icon" href="../../icons/logo.PNG" type="image/x-icon">
+</head>
+<body>
+
+
+    <form action="../../back-end/signup.php" method="post" onsubmit="checker()">
+        <h1 class="caption">Create an account</h1> <br>
+        <label for="username">Enter username</label>
+        <input type="text"  required name="username" placeholder="e.g John Doe"> <br> 
+
+        <label for="email">Enter Email</label>
+        <input type="text"  required name="email" placeholder="e.g johndoe@gmail.com"> <br> 
+
+        <label for="dob" >Enter Date of Birth</label>
+        <input class = "date"  required type="date" name="dob" min="1989-01-01" max="2030-12-31"> <br> 
+
+        <label for="code">Enter Postal Code</label>
+        <input type="text"  required name="code" placeholder="01000-Nairobi"> <br> 
+
+        <label for="password">Enter password</label>
+        <input type="password"  required name="password" autocomplete="off" placeholder="******" id="pass"> <br> 
+
+        <label for="password">Confirm password</label>
+        <input type="password" required  name="con-pass" autocomplete="off" placeholder="******" id="con-pass"> <br>
+        <div class="sect">
+    
+                <input type="submit" value="Sign up">
+                <input type="reset" value="Cancel" onclick="removeShake()">
+    
+        </div>
+                     
+        <p>
+            Already have an account? <a style="text-decoration: none; color: red;" href="../login-page/login.html">Log in</a>
+        </p>
+    </form>
+
+
+    <!-- using js to confirm password -->
+        <script>
+        let firstPassword = document.querySelector("#pass");
+        // document.getElementById("pass")
+
+        let secondPassword = document.querySelector("#con-pass");
+
+        // function checker(){} is same as line below
+
+        const checker = ()=>{
+            //if it does not match
+            if(firstPassword.value!==secondPassword.value){
+        // alert("Oops! Validation failed!");
+    //  returnToPreviousPage();
+
+    //animation
+    secondPassword.classList.add("shake");
+    secondPassword.value = "";
+    secondPassword.setAttribute("placeholder","Password does not match. Please Try again");
+    
+    //prevent form from submitting
+    event.preventDefault();
+      return false;
+            }
+
+            else{
+                // alert("Validations successful!");
+        secondPassword.classList.remove("shake");
+        return true;
+            }
+        }
+
+        const removeShake = ()=>{
+            if(secondPassword.classList.contains("shake")){
+                secondPassword.classList.remove("shake");
+                secondPassword.setAttribute("placeholder","****");
+            }
+        }
+        secondPassword.addEventListener("click",removeShake());
+    </script>
+</body>
+</html>
+
+

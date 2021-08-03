@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="eCycle electric bikes purchase | City cycle | Road bike | Electric assisted
+    cycle | Cross-bike | Mountain bike | Mini Velo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCycle | New Product page</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/shop.css">
+    <link rel="stylesheet" href="../../styles/product.css">
+    <link rel="shortcut icon" href="../../icons/logo.PNG" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <img src="../../icons/logo.PNG" alt="logo" class="logo">
+
+        <p class="menu-bar flex-p"> <img src="../../icons/menu.svg" class="icon">Menu</p>
+
+        <div class="flex-class links">
+            <a href="admin.html">Home</a>
+            <a href="../landing-shop/contact.html">Contact Us</a>
+            <a href="../login-page/login.html " class="sign-up-btn">Log out</a>
+        </div>
+    </nav>
+    <div class="dark-overlay"></div>
+
+    <section>
+        <form action="../../back-end/products.php" method="POST" enctype="multipart/form-data">
+            <h3>Add New Product</h3>
+            <div class="one">
+                <label for="brand">Brand Name</label>
+                <input type="text" name="brand" id="brand"><br>
+            </div>
+            <div class="two">
+                <label for="type">Type</label>
+                <input list="types" name="type" id="type">
+                <datalist id="types">
+                        <option value="City Cycle">
+                        <option value="Road Bike">
+                        <option value="Electric asssited">
+                        <option value="Cross-bike">
+                        <option value="Mountain Bike">
+                        <option value="Mini Velo">
+                </datalist><br>
+            </div>
+            <div class="three">
+                <label for="price">Price</label>
+                <input type="number" name="price">
+            </div>
+            <div class="four">
+                <label for="condition">Condition</label> <br>
+                <select name="condition" id="">
+                    <option value="new">New</option>
+                    <option value="refurbished">Refurbished</option>
+                </select>
+            </div>
+            <div class="five">
+                <label for="image">Add bicycle picture</label>
+                <input type="file" name="image" id="">
+            </div>
+            <div class="six">
+                <input type="submit" name="submit" id="sub" value="Submit!">
+                <input type="reset" id="res">
+            </div>
+            
+        </form>
+    </div>
+    </section>
+
+  
+    <footer class="foot">
+        <div class="vision">
+            <h2>Vision</h2>
+            <p>To reduce global warming caused by emmision of carbon(iv) oxide.</p>
+            <h2>Mission</h2>
+            <p>Offer an eco-friendly alternative for transport compared to use of fuel.</p>
+        </div>
+
+        <div class="footer-partners">
+            <h2>Our Partners</h2>
+            <img src="../../icons/tlc-logo 1.svg" alt="">
+            <img src="../../icons/cycle_logo-removebg-preview 1.svg" alt="">
+        </div>
+        <div class="footer-social-media">
+            <h2>Follow us on:</h2>
+            <ul>
+                <li><a href="#" class="flex-p"> <img class="icon" src="../../icons/facebook-svgrepo-com.svg" alt=""> @eCycle_Kenya</a></li>
+                <li><a href="#" class="flex-p"> <img class="icon" src="../../icons/twitter-svgrepo-com.svg" alt=""> eCycle_Kenya</a></li>
+                <li><a href="#" class="flex-p"> <img class="icon" src="../../icons/youtube-svgrepo-com.svg" alt=""> eCcyle Kenya </a></li>
+            </ul>
+        </div>
+</footer>
+
+<script src="../js/menu.js"></script>
+
+</body>
+</html>

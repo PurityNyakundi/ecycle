@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root{
+    --boxshadow: -22px 22px 44px rgba(217, 217, 217, 0.2), 22px -22px 44px rgba(217, 217, 217, 0.2), -22px -22px 44px rgba(255, 255, 255, 0.9), 22px 22px 55px rgba(217, 217, 217, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(217, 217, 217, 0.5);
+}
+*{
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding:0;
+}
+body{
+    background:white;
+
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+}
+li{
+    list-style: none;
+    margin: 5px 0;
+}
+a{
+    text-decoration: none;
+    color: wheat;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10px;
+    background: #3de743;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#filter{
+    width: 40%;
+}
+
+.logo{
+    width: 100px;
+    height: 45px;
+}
+.search-bar{
+    background: white;
+    display: flex;
+    place-items: center;
+    padding: 4px 14px;
+    padding-left: 8px;
+    border-radius: 30px;
+}
+#search{
+    border-right: 2px solid black;
+    border-radius: unset;
+    margin-right: 13px;
+    font-size: 14px;
+    padding: 0;
+}
+#search:focus{
+    outline: none;
+    border: none;
+    border-right: 2px solid black;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    /* margin: 5px; */
+}
+.flex-class{
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 0.4;
+    position: relative;
+}
+.flex-p{
+    display: flex;
+    place-items: center;
+    flex-wrap: wrap;
+}
+.arrow-down{
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+}
+.filter{
+    cursor: pointer;
+    flex-grow: 0;
+    max-width: 60px;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    margin: 4px;
+}
+.links a:hover, .filter:hover{
+    color: white;
+}
+.sign-up-btn{
+    color: #06c00d! important;
+    background-color: white;
+    border-radius: 30px;
+    padding: 4px 8px;
+
+}
+.dark-overlay{
+    background: rgba(0, 0, 0, 0.555);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    position: fixed;
+    display: none;
+}
+
+
+/* slider details */
+
+.welcome-slider{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 60vh;
+
+    padding: 1rem 0.5rem;
+    padding-top: 4rem;
+    background: linear-gradient(79.2deg,transparent,#8fea93);
+
+}
+
+
+
+.slide-bike{
+    width: 300px;
+    height: auto;
+    flex-grow: 0.3;
+}
+.slide-text{
+    max-width: 300px;
+}
+.buy-btn{
+    background: #3d78cf;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 30px;
+    color: white;
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+.swiper-container {
+    width: 100%;
+    /* height: 300px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .products-container h1{
+    text-align: center;
+    margin: 1rem 0;
+  }
+.products{
+    display: flex;
+}
+.product-img{
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+.products p{
+    margin: 4px 0;
+}
+.prod-title{
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.prod-card{
+    box-shadow: var(--boxshadow);
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.247) ;
+    border-radius: 4px;
+    padding: 15px 10px;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.buy{
+    background-color: #3D78CF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 4px 10px;
+}
+.wish{
+    color: black;
+    border: 1.5px solid #3d78cf;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+.icon-small{
+    width: 24px;
+    height: 24px;
+}
+footer{
+    background-image: url(../icons/wave\ darkBlue\ svg\ 1.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    justify-content: space-around;
+    color: wheat;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding: 2rem 0.3rem;
+    padding-top: 3.5rem;
+    background-position: center;
+}
+footer div{
+    margin: 10px;
+}
+.footer-links h2,.footer-partners h2,.footer-social-media h2, .vision h2{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin: 5px 0;
+    margin-top: 1rem;
+    width: max-content;
+}
+
+.menu-bar{
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+@media screen and (max-width:700px){
+    #search{
+        width: 100%;
+    }
+    .search-bar{
+        display: none;
+    }
+    .links{
+        display: none;
+    }
+    .menu-bar{
+        display: flex;
+    }
+}
+
+footer li a:hover {
+    color: black;
+}
+@keyframes moveDown {
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
+@-moz-keyframes moveDown {
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
+.form-filter{
+    position: absolute;
+    top: 45px;
+    backdrop-filter: blur(4px);
+    background:#3de74391;
+    width: 300px;
+    display: none;
+}
+.radio-buttons{
+    justify-self: left;
+    margin: 5px;
+}
+select{
+    border-radius: 6px;
+    width: 250px;
+    height: 40px;
+}
+select:focus{
+    border: none;
+}
+input[type="text"]{
+ width: 120px;
+ border: none;
+}
+input[type="text"]:focus{
+    border: none;
+}
+input[type= "submit"]{
+    justify-self: center;
+}
+.show-flex{
+    display: flex;
+    margin: 15px 5px;
+    transform: translateY(-4rem);
+    opacity: .7;
+    width: 100%;
+    animation: moveDown .3s ease-in forwards;
+    -moz-animation: moveDown .4s ease-in forwards;
+
+}
+.show-overlay{
+    display: flex;
+
+}
+.show-links{
+    display: grid;
+    justify-items: center;
+    align-content: space-around;
+    width: 100%;
+    min-height: 150px;
+    transform: translateY(-4rem);
+    opacity: 0;
+    animation: moveDown .4s .3s ease-in forwards;
+    -moz-animation: moveDown .4s .3s ease-in forwards;
+
+}
+.show-grid{
+    display: grid;
+}
